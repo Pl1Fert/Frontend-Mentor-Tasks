@@ -1,0 +1,113 @@
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: $Pale-blue;
+    color: $Desaturated-blue;
+    font-family: 'Outfit', sans-serif;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color:$Bright-blue;
+    cursor: pointer;
+}
+
+h2,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 10px;
+    min-width: 350px;
+    text-align: center;
+    padding: 10px 95px;
+    color: $Desaturated-blue;
+    transition: .3s linear;
+    margin-bottom: 10px;
+}
+
+.btn:last-child {
+    margin-bottom: 25px;
+}
+
+.btn:hover {
+    color: white;
+    background-color: $Bright-blue;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    
+}
+
+.illustration-hero {
+    border-radius: 20px 20px 0 0;
+}
+
+.order-component {
+    margin: calc(50vh - 350px) auto 0 auto;
+    max-width: 450px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
+
+    &__content {
+        max-width: 350px;
+        margin: 0 auto;
+        margin-top: 40px;
+
+        &__title {
+            color:rgba(0, 0, 0, 0.769);
+        }
+
+        &__text {
+            margin-top: 20px;
+        }
+
+        &__plan {
+            background-color: $Very-pale-blue;
+            border-radius: 10px;
+            margin: 20px 0 30px;
+            padding: 15px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__link {
+                font-size: 12px;
+                margin-left: 90px;
+            }
+
+            &__link:hover {
+                border-bottom: 1px solid $Bright-blue;
+            }
+
+            &__description {
+               &__title {
+                color:rgba(0, 0, 0, 0.769);
+                margin-bottom: 3px;
+               }
+            }
+        }
+    }
+}
