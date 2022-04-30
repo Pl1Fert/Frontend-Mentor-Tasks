@@ -34,7 +34,7 @@ p {
   border-radius: 10px;
   min-width: 350px;
   text-align: center;
-  padding: 10px 95px;
+  padding: 13px 95px;
   color: #7280a7;
   -webkit-transition: .3s linear;
   transition: .3s linear;
@@ -57,6 +57,7 @@ p {
 
 .illustration-hero {
   border-radius: 20px 20px 0 0;
+  width: 100%;
 }
 
 .order-component {
@@ -109,5 +110,20 @@ p {
 .order-component__content__plan__description__title {
   color: rgba(0, 0, 0, 0.769);
   margin-bottom: 3px;
+}
+
+@media (max-width: 450px) {
+  .order-component {
+    margin: calc(50vh - 350px) auto 0;
+    width: 350px;
+    padding: 0 15px;
+  }
+  .order-component__plan {
+    width: 300px;
+  }
+  .btn {
+    min-width: 300px;
+    padding: 15px 45px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
