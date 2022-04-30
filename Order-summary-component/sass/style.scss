@@ -104,6 +104,7 @@ p {
             }
 
             &__description {
+                
                &__title {
                 color:rgba(0, 0, 0, 0.769);
                 margin-bottom: 3px;
@@ -115,7 +116,6 @@ p {
 
 @media(max-width:450px) {
     .order-component {
-        margin: calc(50vh - 350px) auto 0;
         width: 350px;
         padding: 0 15px;
 
