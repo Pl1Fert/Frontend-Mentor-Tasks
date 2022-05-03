@@ -1,0 +1,121 @@
+$Bright_orange: hsl(31, 77%, 52%);
+$Dark_cyan: hsl(184, 100%, 22%);
+$Very_dark_cyan: hsl(179, 100%, 13%);
+$Very_light_gray: /*(background, headings, buttons)*/ hsl(0, 0%, 95%);
+$Transparent_white: /*(paragraphs)*/ hsla(0, 0%, 100%, 0.75);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Outfit', sans-serif;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.card {
+    max-width: 300px;
+    padding: 40px 50px 50px 45px;
+    min-height: 450px;
+}
+
+.link {
+    box-sizing: inline-block;
+    background-color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    transition: .3s linear;
+}
+
+.link:hover {
+    border: 1px solid white;
+    color: white;
+}
+
+.cards {
+    max-width: 920px;
+    margin: calc(50vh - 225px) auto 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+
+    &__sedans {
+        background-color: $Bright_orange;
+        &__link {
+            color: $Bright_orange;
+        }
+
+        &__link:hover {
+            background-color: $Bright_orange; 
+        }
+    }
+
+    &__suvs {
+        background-color: $Dark_cyan;
+        &__link {
+            color: $Dark_cyan;
+        }
+
+        &__link:hover {
+            background-color: $Dark_cyan; 
+        }
+    }
+
+    &__luxury {
+        background-color: $Very_dark_cyan;
+        &__link {
+            color: $Very_dark_cyan;
+        }
+
+        &__link:hover {
+            background-color: $Very_dark_cyan; 
+        }
+    }
+
+    &__content {
+        text-align: start;
+
+        &__title {
+            color: $Very_light_gray;
+            text-transform: uppercase;
+            margin: 35px 0;
+        }
+    
+        &__text {
+            color: $Transparent_white;
+            margin-bottom: 85px;
+        }
+    }
+}
+
+@media(max-width:450px) {
+
+    .container {
+        max-width: 300px;
+    }
+    
+    .cards {
+        flex-wrap: wrap;
+        margin: 20px auto;
+    }
+}
