@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/style.css" type="text/css" />
+    <title>FreeCodeCamp</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="form__title">freeCodeCamp Survey Form</h1>
+      <p class="form__subtitle">
+        Thank you for taking the time to help us improve the platform
+      </p>
+      <form action="#" class="form">
+        <fieldset>
+          <label
+            >Name<input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              required
+          /></label>
+          <label
+            >Email<input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+          /></label>
+          <label
+            >Age <span>(optional)</span
+            ><input type="number" name="age" placeholder="Age"
+          /></label>
+          <label
+            >Which option best describes your current role?<select>
+              <option value="">Select current role</option>
+              <option value="1">Student</option>
+              <option value="2">Full time job</option>
+              <option value="3">Full time learner</option>
+              <option value="4">Prefer not to say</option>
+              <option value="5">Other</option>
+            </select></label
+          >
+        </fieldset>
+        <fieldset>
+          <label>Would you recommend freeCodeCamp to a friend?</label>
+          <label><input type="radio" name="recomendation" class="inline"/> Definitely</label>
+          <label><input type="radio" name="recomendation" class="inline"/> Maybe</label>
+          <label><input type="radio" name="recomendation" class="inline"/> Not sure</label>
+          <label
+            >What is your favorite feature of freeCodeCamp?<select>
+              <option value="">Select an option</option>
+              <option value="1">Challenges</option>
+              <option value="2">Projects</option>
+              <option value="3">Community</option>
+              <option value="4">Open source</option>
+            </select></label
+          >
+          <label
+            >What would you like to see improved?
+            <span>(Check all that apply)</span></label
+          >
+          <label
+            ><input type="checkbox" name="improve" class="inline"/> Front-end Projects</label
+          ><label
+            ><input type="checkbox" name="improve" class="inline"/> Back-end Projects</label
+          ><label
+            ><input type="checkbox" name="improve" class="inline"/> Data Visualization</label
+          ><label><input type="checkbox" name="improve" class="inline"/> Challenges</label
+          ><label
+            ><input type="checkbox" name="improve" class="inline"/> Open Source
+            Community</label
+          ><label
+            ><input type="checkbox" name="improve" class="inline"/> Gitter help rooms</label
+          ><label><input type="checkbox" name="improve" class="inline"/> Videos</label
+          ><label><input type="checkbox" name="improve" class="inline"/> City Meetups</label
+          ><label><input type="checkbox" name="improve" class="inline"/> Wiki</label
+          ><label><input type="checkbox" name="improve" class="inline"/> Forum</label
+          ><label
+            ><input type="checkbox" name="improve" class="inline"/> Additional Courses</label
+          >
+        </fieldset>
+        <fieldset>
+          <label>
+            Any comments or suggestions?
+            <textarea
+              name="comments"
+              cols="30"
+              rows="10"
+              placeholder="Enter your comment here..."
+            ></textarea>
+          </label>
+          <input type="submit" value="Submit" />
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

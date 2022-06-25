@@ -1,0 +1,73 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color:#f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
+    background-color: palevioletred;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+form {
+    background-color: #1b1b32;
+    padding: 20px 30px; 
+    margin-top: 50px;
+}
+
+h1, p {
+    text-align: center;
+    margin: 10px auto;
+}
+
+fieldset {
+    border: none;
+    padding: 10px 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    min-height: 35px;
+    margin: 5px 0 15px 0;
+    color: grey;
+}
+
+.inline {
+    width: unset;
+    vertical-align: middle;
+}
+
+input[type="submit"] {
+    background-color: lawngreen;
+    cursor: pointer;
+    color:#f5f6f7;
+}
+
+input[type="submit"]:hover {
+    background-color: green;
+}
+
+label {
+    font-weight: bold;
+}
+
+label span {
+    font-weight: normal;
+}
