@@ -15,26 +15,26 @@
       </p>
       <form action="#" class="form">
         <fieldset>
-          <label
+          <label for="name"
             >Name<input
               type="text"
               name="name"
-              placeholder="Enter your name"
+              placeholder="Enter your name" class="form__control"
               required
           /></label>
-          <label
+          <label for="email"
             >Email<input
               type="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder="Enter your email" class="form__control"
               required
           /></label>
-          <label
+          <label for="age"
             >Age <span>(optional)</span
-            ><input type="number" name="age" placeholder="Age"
+            ><input type="number" name="age" placeholder="Age" class="form__control"
           /></label>
           <label
-            >Which option best describes your current role?<select>
+            >Which option best describes your current role?<select class="form__control">
               <option value="">Select current role</option>
               <option value="1">Student</option>
               <option value="2">Full time job</option>
@@ -46,11 +46,11 @@
         </fieldset>
         <fieldset>
           <label>Would you recommend freeCodeCamp to a friend?</label>
-          <label><input type="radio" name="recomendation" class="inline"/> Definitely</label>
-          <label><input type="radio" name="recomendation" class="inline"/> Maybe</label>
-          <label><input type="radio" name="recomendation" class="inline"/> Not sure</label>
+          <label for="recomendation"><input type="radio" name="recomendation" class="inline"/> Definitely</label>
+          <label for="recomendation"><input type="radio" name="recomendation" class="inline"/> Maybe</label>
+          <label for="recomendation"><input type="radio" name="recomendation" class="inline"/> Not sure</label>
           <label
-            >What is your favorite feature of freeCodeCamp?<select>
+            >What is your favorite feature of freeCodeCamp?<select class="form__control">
               <option value="">Select an option</option>
               <option value="1">Challenges</option>
               <option value="2">Projects</option>
@@ -62,11 +62,11 @@
             >What would you like to see improved?
             <span>(Check all that apply)</span></label
           >
-          <label
+          <label 
             ><input type="checkbox" name="improve" class="inline"/> Front-end Projects</label
-          ><label
+          ><label 
             ><input type="checkbox" name="improve" class="inline"/> Back-end Projects</label
-          ><label
+          ><label 
             ><input type="checkbox" name="improve" class="inline"/> Data Visualization</label
           ><label><input type="checkbox" name="improve" class="inline"/> Challenges</label
           ><label
@@ -83,7 +83,7 @@
           >
         </fieldset>
         <fieldset>
-          <label>
+          <label for="comments">
             Any comments or suggestions?
             <textarea
               name="comments"

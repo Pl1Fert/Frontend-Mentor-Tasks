@@ -8,9 +8,9 @@ body {
     margin: 0;
     padding: 0;
     color:#f5f6f7;
-    font-family: Tahoma;
-    font-size: 16px;
-    background-color: palevioletred;
+    font-family: Poppins, sans-serif;
+    font-size: 1rem;
+    background-color: rgb(187, 112, 216);
 }
 
 .container {
@@ -23,6 +23,7 @@ form {
     background-color: #1b1b32;
     padding: 20px 30px; 
     margin-top: 50px;
+    border-radius: 0.25rem;
 }
 
 h1, p {
@@ -44,20 +45,34 @@ input,
 select,
 textarea {
     width: 100%;
-    min-height: 35px;
-    margin: 5px 0 15px 0;
+    min-height: 2.35rem;
+    margin: 10px 0 15px 0;
     color: grey;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.form__control {
+    border-radius: 0.25rem;
 }
 
 .inline {
     width: unset;
     vertical-align: middle;
+    margin: 0 0 3px 0;
 }
 
 input[type="submit"] {
-    background-color: lawngreen;
+    display: block;
+    background-color: #37af65;
     cursor: pointer;
     color:#f5f6f7;
+    min-height: 50px;
+    width: 60%;
+    margin: 5px auto 15px auto;
+    border: none;
+    border-radius: 0.25rem;
+    transition: 0.25s;
 }
 
 input[type="submit"]:hover {
