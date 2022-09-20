@@ -1,0 +1,60 @@
+/*Text*/
+/*Background gradients*/
+/*Dividers*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  color: hsl(240deg, 6%, 50%);
+  background: linear-gradient(to bottom, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.card {
+  max-width: 920px;
+  margin: 125px auto 0;
+  padding: 90px 65px 90px 0;
+  display: flex;
+  border-radius: 20px;
+  background-color: azure;
+}
+.card__title {
+  margin-bottom: 40px;
+  color: hsl(238deg, 29%, 16%);
+}
+.card__image-block {
+  position: relative;
+  min-width: 470px;
+  overflow: hidden;
+}
+.card__image {
+  position: absolute;
+}
+
+.box-image {
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.woman-image {
+  top: 0;
+  left: -20%;
+  z-index: 2;
+}
+
+.bg-image {
+  width: 500px;
+  height: 500px;
+  top: 0;
+  left: -30%;
+  z-index: 1;
+}/*# sourceMappingURL=style.css.map */

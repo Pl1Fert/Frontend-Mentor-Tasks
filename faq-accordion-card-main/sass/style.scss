@@ -1,0 +1,72 @@
+/*Text*/
+$very-dark-desaturated-blue:hsl(238, 29%, 16%);
+$soft-red: hsl(14, 88%, 65%);
+$very-dark-grayish-blue: hsl(237, 12%, 33%);
+$dark-grayish-blue: hsl(240, 6%, 50%);
+/*Background gradients*/
+$soft-violet: hsl(273, 75%, 66%);
+$soft-blue: hsl(240, 73%, 65%);
+/*Dividers*/
+$light-grayish-blue: hsl(240, 5%, 91%);
+
+
+*, 
+::before, 
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    color: $dark-grayish-blue;
+    background: linear-gradient(to bottom, $soft-violet, $soft-blue);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.card {
+    max-width: 920px;
+    margin: 125px auto 0;
+    padding: 90px 65px 90px 0;
+    display: flex;
+    border-radius: 20px;
+    background-color: azure;
+
+    &__title {
+        margin-bottom: 40px;
+        color:$very-dark-desaturated-blue;
+    }
+
+    &__image-block {
+        position: relative;
+        min-width: 470px;
+        overflow: hidden;
+    }
+
+    &__image {
+        position: absolute;
+    }
+}
+
+.box-image {
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.woman-image {
+    top: 0;
+    left: -20%;
+    z-index: 2;
+}
+
+.bg-image {
+    width: 500px;
+    height: 500px;
+    top: 0;
+    left: -30%;
+    z-index: 1;
+}
