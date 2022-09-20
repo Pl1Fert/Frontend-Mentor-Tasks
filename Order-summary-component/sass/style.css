@@ -4,21 +4,20 @@ body {
   font-size: 16px;
   background-image: url(../images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
-  background-color: #e0e8ff;
-  color: #7280a7;
-  font-family: 'Outfit', sans-serif;
+  background-color: hsl(225deg, 100%, 94%);
+  color: hsl(224deg, 23%, 55%);
+  font-family: "Outfit", sans-serif;
 }
 
 *,
 :after,
 :before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
-  color: #3829e0;
+  color: hsl(245deg, 75%, 52%);
   cursor: pointer;
 }
 
@@ -35,9 +34,8 @@ p {
   min-width: 350px;
   text-align: center;
   padding: 13px 95px;
-  color: #7280a7;
-  -webkit-transition: .3s linear;
-  transition: .3s linear;
+  color: hsl(224deg, 23%, 55%);
+  transition: 0.3s linear;
   margin-bottom: 10px;
 }
 
@@ -47,7 +45,7 @@ p {
 
 .btn:hover {
   color: white;
-  background-color: #3829e0;
+  background-color: hsl(245deg, 75%, 52%);
 }
 
 .container {
@@ -67,46 +65,33 @@ p {
   text-align: center;
   background-color: white;
 }
-
 .order-component__content {
   max-width: 350px;
   margin: 0 auto;
   margin-top: 40px;
 }
-
 .order-component__content__title {
   color: rgba(0, 0, 0, 0.769);
 }
-
 .order-component__content__text {
   margin-top: 20px;
 }
-
 .order-component__content__plan {
-  background-color: #f5f7ff;
+  background-color: hsl(225deg, 100%, 98%);
   border-radius: 10px;
   margin: 20px 0 30px;
   padding: 15px 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .order-component__content__plan__link {
   font-size: 12px;
   margin-left: 90px;
 }
-
 .order-component__content__plan__link:hover {
-  border-bottom: 1px solid #3829e0;
+  border-bottom: 1px solid hsl(245deg, 75%, 52%);
 }
-
 .order-component__content__plan__description__title {
   color: rgba(0, 0, 0, 0.769);
   margin-bottom: 3px;
@@ -124,5 +109,4 @@ p {
     min-width: 300px;
     padding: 15px 45px;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

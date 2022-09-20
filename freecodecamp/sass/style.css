@@ -1,8 +1,7 @@
 *,
 ::after,
 ::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,7 +10,7 @@ body {
   color: #f5f6f7;
   font-family: Poppins, sans-serif;
   font-size: 1rem;
-  background-color: #bb70d8;
+  background-color: rgb(187, 112, 216);
 }
 
 .container {
@@ -63,7 +62,7 @@ textarea {
   margin: 0 0 3px 0;
 }
 
-input[type="submit"] {
+input[type=submit] {
   display: block;
   background-color: #37af65;
   cursor: pointer;
@@ -73,11 +72,10 @@ input[type="submit"] {
   margin: 5px auto 15px auto;
   border: none;
   border-radius: 0.25rem;
-  -webkit-transition: 0.25s;
   transition: 0.25s;
 }
 
-input[type="submit"]:hover {
+input[type=submit]:hover {
   background-color: green;
 }
 
@@ -87,5 +85,4 @@ label {
 
 label span {
   font-weight: normal;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
