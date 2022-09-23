@@ -19,54 +19,110 @@ $light-grayish-blue: hsl(240, 5%, 91%);
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Outfit', sans-serif;
-    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 14px;
     color: $dark-grayish-blue;
     background: linear-gradient(to bottom, $soft-violet, $soft-blue);
     background-repeat: no-repeat;
     height: 100vh;
+    position: relative;
 }
 
-.card {
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    min-width: 920px;
+    min-height: 520px;
     max-width: 920px;
-    margin: 125px auto 0;
-    padding: 90px 65px 90px 0;
-    display: flex;
-    border-radius: 20px;
+    max-height: 520px;
     background-color: azure;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    position: relative;
+    padding: 65px 90px 80px 0;
 
-    &__title {
-        margin-bottom: 40px;
-        color:$very-dark-desaturated-blue;
-    }
+    .info-block {
+        margin-left: 470px;
 
-    &__image-block {
-        position: relative;
-        min-width: 470px;
-        overflow: hidden;
-    }
-
-    &__image {
-        position: absolute;
+        .title {
+            color: $very-dark-desaturated-blue;
+        }
     }
 }
 
-.box-image {
-    top: 0;
-    left: 0;
-    z-index: 3;
+.image {
+    position: absolute;
 }
 
 .woman-image {
-    top: 0;
-    left: -20%;
+    top: 15%;
+    left: -10%;
     z-index: 2;
 }
 
 .bg-image {
-    width: 500px;
-    height: 500px;
-    top: 0;
-    left: -30%;
+    top: -60%;
+    left: -63%; 
     z-index: 1;
+}
+
+.box-image {
+    top: 45%;
+    left: 11%;
+    z-index: 3;
+}
+
+.accordion {
+    &__item {
+        border-bottom: 1px solid $light-grayish-blue;
+        margin-bottom: 10px;
+        padding: 10px 0;
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        &__header:hover {
+            color: $soft-red;
+        }
+
+        &__header::after {
+            display: block;
+            flex-shrink: 0;
+            width: 10px;
+            height: 10px;
+            margin-left: auto;
+            background-image: url(../images/icon-arrow-down.svg);
+            background-repeat: no-repeat;
+            content: "";
+        }
+
+        &__show &__header-text{
+            color: $very-dark-desaturated-blue;
+            font-weight: 700;
+        }
+
+        &__show &__header::after {
+            transform: rotate(-180deg);
+        }
+
+        &__show &__body {
+            display: block;
+        }
+
+        &:not(&__show) &__body {
+            display: none;
+        }
+    }
 }

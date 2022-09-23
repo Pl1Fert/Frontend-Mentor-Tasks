@@ -10,51 +10,99 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Outfit", sans-serif;
-  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 14px;
   color: hsl(240deg, 6%, 50%);
   background: linear-gradient(to bottom, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
   background-repeat: no-repeat;
   height: 100vh;
+  position: relative;
 }
 
-.card {
-  max-width: 920px;
-  margin: 125px auto 0;
-  padding: 90px 65px 90px 0;
-  display: flex;
-  border-radius: 20px;
-  background-color: azure;
+p {
+  padding: 0;
+  margin: 0;
 }
-.card__title {
-  margin-bottom: 40px;
+
+.container {
+  min-width: 920px;
+  min-height: 520px;
+  max-width: 920px;
+  max-height: 520px;
+  background-color: azure;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  position: relative;
+  padding: 65px 90px 80px 0;
+}
+.container .info-block {
+  margin-left: 470px;
+}
+.container .info-block .title {
   color: hsl(238deg, 29%, 16%);
 }
-.card__image-block {
-  position: relative;
-  min-width: 470px;
-  overflow: hidden;
-}
-.card__image {
+
+.image {
   position: absolute;
 }
 
-.box-image {
-  top: 0;
-  left: 0;
-  z-index: 3;
-}
-
 .woman-image {
-  top: 0;
-  left: -20%;
+  top: 15%;
+  left: -10%;
   z-index: 2;
 }
 
 .bg-image {
-  width: 500px;
-  height: 500px;
-  top: 0;
-  left: -30%;
+  top: -60%;
+  left: -63%;
   z-index: 1;
+}
+
+.box-image {
+  top: 45%;
+  left: 11%;
+  z-index: 3;
+}
+
+.accordion__item {
+  border-bottom: 1px solid hsl(240deg, 5%, 91%);
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+.accordion__item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.accordion__item__header:hover {
+  color: hsl(14deg, 88%, 65%);
+}
+.accordion__item__header::after {
+  display: block;
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  margin-left: auto;
+  background-image: url(../images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  content: "";
+}
+.accordion__item__show .accordion__item__header-text {
+  color: hsl(238deg, 29%, 16%);
+  font-weight: 700;
+}
+.accordion__item__show .accordion__item__header::after {
+  transform: rotate(-180deg);
+}
+.accordion__item__show .accordion__item__body {
+  display: block;
+}
+.accordion__item:not(.accordion__item__show) .accordion__item__body {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
