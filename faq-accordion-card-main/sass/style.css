@@ -16,7 +16,9 @@ body {
   background: linear-gradient(to bottom, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
   background-repeat: no-repeat;
   height: 100vh;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 p {
@@ -25,47 +27,60 @@ p {
 }
 
 .container {
-  min-width: 920px;
-  min-height: 520px;
-  max-width: 920px;
-  max-height: 520px;
+  width: 920px;
+  height: 520px;
   background-color: azure;
   border-radius: 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  position: relative;
-  padding: 65px 90px 80px 0;
+  padding: 65px 90px 0 0;
+  display: flex;
 }
 .container .info-block {
-  margin-left: 470px;
+  width: 50%;
 }
 .container .info-block .title {
   color: hsl(238deg, 29%, 16%);
 }
 
-.image {
+.images {
+  width: 50%;
+  position: relative;
+}
+.images-one {
   position: absolute;
-}
-
-.woman-image {
-  top: 15%;
-  left: -10%;
   z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/illustration-woman-online-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-x: -90px;
+  background-position-y: 30px;
 }
-
-.bg-image {
-  top: -60%;
-  left: -63%;
-  z-index: 1;
+.images-one img {
+  position: absolute;
+  top: 35%;
+  left: -26%;
+  display: none;
 }
-
-.box-image {
-  top: 45%;
-  left: 11%;
+.images-two {
+  position: absolute;
   z-index: 3;
+  top: 30%;
+  left: -27%;
+}
+.images-three {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 185%;
+  background-position-x: -445px;
+  background-position-y: -275px;
+}
+.images-three img {
+  display: none;
 }
 
 .accordion__item {
@@ -105,4 +120,42 @@ p {
 }
 .accordion__item:not(.accordion__item__show) .accordion__item__body {
   display: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    max-width: 360px;
+    height: auto;
+  }
+  .container .info-block {
+    margin-top: 45%;
+    width: 80%;
+    margin-bottom: 10%;
+  }
+  .container .info-block .title {
+    text-align: center;
+  }
+  .images {
+    width: 100%;
+  }
+  .images-one {
+    background-image: none;
+  }
+  .images-one img {
+    display: block;
+    width: 60%;
+    left: 20%;
+  }
+  .images-two img {
+    display: none;
+  }
+  .images-three {
+    background-image: none;
+  }
+  .images-three img {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -25,7 +25,9 @@ body {
     background: linear-gradient(to bottom, $soft-violet, $soft-blue);
     background-repeat: no-repeat;
     height: 100vh;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 p {
@@ -34,22 +36,15 @@ p {
 }
 
 .container {
-    min-width: 920px;
-    min-height: 520px;
-    max-width: 920px;
-    max-height: 520px;
+    width: 920px;
+    height: 520px;
     background-color: azure;
     border-radius: 15px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-    position: relative;
-    padding: 65px 90px 80px 0;
+    padding: 65px 90px 0 0;
+    display: flex;
 
     .info-block {
-        margin-left: 470px;
+        width: 50%;
 
         .title {
             color: $very-dark-desaturated-blue;
@@ -57,26 +52,51 @@ p {
     }
 }
 
-.image {
-    position: absolute;
-}
+.images {
+    width: 50%;
+    position: relative;
 
-.woman-image {
-    top: 15%;
-    left: -10%;
-    z-index: 2;
-}
+    &-one {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/illustration-woman-online-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position-x: -90px;
+        background-position-y: 30px;
 
-.bg-image {
-    top: -60%;
-    left: -63%; 
-    z-index: 1;
-}
+        img {
+            position: absolute;
+            top: 35%;
+            left: -26%;
+            display: none;
+        }
+    }
 
-.box-image {
-    top: 45%;
-    left: 11%;
-    z-index: 3;
+    &-two {
+        position: absolute;
+        z-index: 3;
+        top: 30%;
+        left:-27%;
+    }
+
+    &-three {
+        position: absolute; 
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 185%;
+        background-position-x: -445px;
+        background-position-y: -275px;
+
+        img {
+            display: none;
+        }
+    }
 }
 
 .accordion {
@@ -125,4 +145,51 @@ p {
             display: none;
         }
     }
+}
+
+
+@media only screen and (max-width: 375px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        max-width: 360px;
+        height: auto;
+
+        .info-block {
+            margin-top: 45%;
+            width: 80%;
+            margin-bottom: 10%;
+
+            .title {
+                text-align: center;
+            }
+        }
+    }
+
+    .images {
+        width: 100%;
+        &-one {
+            background-image: none;
+            img {
+                display: block;
+                width: 60%;
+                left: 20%;
+            }
+        }
+
+        &-two {
+            img {
+                display: none; 
+            }
+        }
+
+        &-three {
+            background-image: none;
+            img {
+                display: none;
+            }
+        }
+    }
+    
 }
