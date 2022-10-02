@@ -21,6 +21,7 @@ a {
   text-decoration: none;
   color: hsl(0deg, 0%, 41%);
   cursor: pointer;
+  transition: 0.2s linear;
 }
 
 ul {
@@ -28,8 +29,11 @@ ul {
 }
 
 .button {
+  border: none;
+  outline: none;
   cursor: pointer;
   transition: 0.2s linear;
+  border-radius: 12px;
 }
 
 .open-nav-button {
@@ -38,6 +42,96 @@ ul {
 
 .close-nav-button {
   display: none;
+}
+
+.header {
+  width: 95%;
+  margin: 35px auto 80px auto;
+  align-items: center;
+  display: flex;
+  gap: 50px;
+  font-size: 15px;
+}
+.header__logo {
+  margin-top: 5px;
+}
+.header__buttons {
+  margin-left: auto;
+}
+.header__buttons button {
+  padding: 15px 30px;
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 41%);
+  border: 1px transparent;
+}
+.header__buttons button:hover {
+  border: 1px solid hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 8%);
+  text-align: center;
+}
+.header__buttons .register-btn {
+  margin-left: 20px;
+}
+.header__buttons .login-btn {
+  padding: 15px 38px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.nav__list__item {
+  position: relative;
+  padding-bottom: 10px;
+}
+.nav__list__item-link {
+  margin-right: 4px;
+}
+.nav__list__item-link:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.nav__list__item:hover .dropdown__list {
+  display: block;
+}
+.nav__list__item:hover .arrow-image {
+  transform: rotate(180deg);
+}
+.nav__list .arrow-image {
+  transition: 0.2s linear;
+}
+.nav .dropdown__list {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px hsl(0deg, 0%, 41%);
+  z-index: 1;
+  display: none;
+}
+.nav .dropdown__list__item {
+  display: block;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav .dropdown__list__item-icon {
+  margin-right: 10px;
+}
+.nav .dropdown__list__item-link:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.nav__list__item:first-child .dropdown__list {
+  left: -70%;
+}
+.nav__list__item:nth-child(2) .dropdown__list {
+  min-width: 115px;
 }
 
 .container {
@@ -64,8 +158,6 @@ ul {
   margin-bottom: 55px;
 }
 .container .section__content-btn {
-  border: none;
-  outline: none;
   border-radius: 12px;
   background-color: hsl(0deg, 0%, 8%);
   color: hsl(0deg, 0%, 98%);

@@ -26,6 +26,7 @@ a {
     text-decoration: none;
     color: $medium-gray;
     cursor: pointer;
+    transition: 0.2s linear;
 }
 
 ul {
@@ -33,8 +34,11 @@ ul {
 }
 
 .button {
+    border: none;
+    outline: none;
     cursor: pointer;
     transition: 0.2s linear;
+    border-radius: 12px;
 }
 
 .open-nav-button {
@@ -43,6 +47,116 @@ ul {
 
 .close-nav-button {
     display: none;
+}
+
+.header {
+    width: 95%;
+    margin: 35px auto 80px auto;
+    align-items: center;
+    display: flex;
+    gap: 50px;
+    font-size: 15px;
+
+    &__logo {
+        margin-top: 5px;
+    }
+
+    &__buttons {
+        margin-left: auto;
+
+        button {
+            padding: 15px 30px;
+            background-color: $almost-white;
+            color: $medium-gray;
+            border: 1px transparent;
+        }
+
+        button:hover {
+            border: 1px solid $almost-black;
+            color: $almost-black;
+            text-align: center;
+        }
+
+        .register-btn {
+            margin-left: 20px;
+        }
+
+        .login-btn {
+            padding: 15px 38px;
+        }
+    }
+}
+
+.nav {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+
+        &__item {
+            position: relative;
+            padding-bottom: 10px;
+
+            &-link {
+                margin-right: 4px;
+            }
+
+            &-link:hover {
+                color:$almost-black;
+            }
+        }
+
+        &__item:hover .dropdown__list {
+            display: block;
+        }
+
+        &__item:hover .arrow-image {
+            transform: rotate(180deg);
+        }
+
+        .arrow-image {
+            transition: 0.2s linear;
+        }
+    }
+
+    .dropdown__list {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        padding: 15px 0;
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px $medium-gray;
+        z-index: 1;
+        display: none;
+
+        &__item {
+            display: block;
+            padding: 10px 25px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            &-icon {
+                margin-right: 10px;
+            }
+
+            &-link:hover {
+                color:$almost-black;
+            }
+        }
+    }
+    
+    &__list__item:first-child .dropdown__list {
+        left:-70%;
+    }
+
+    &__list__item:nth-child(2) .dropdown__list {
+        min-width: 115px;
+    }
 }
 
 .container {
@@ -71,8 +185,6 @@ ul {
         }
 
         &-btn {
-            border: none;
-            outline: none;
             border-radius: 12px;
             background-color: $almost-black;
             color: $almost-white;
