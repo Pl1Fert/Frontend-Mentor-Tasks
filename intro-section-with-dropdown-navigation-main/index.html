@@ -1,31 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./sass/style.css">
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
-</head>
-<body>
-
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/style.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="./images/logo.svg" alt="logo" class="logo" />
+      </div>
+      <div class="header__inner">
+        <nav class="nav">
+          <a href="#" class="close-nav-button"
+            ><img
+              src="./images/icon-close-menu.svg"
+              alt="#"
+              class="close-nav-button-img"
+          /></a>
+          <ul class="nav__list">
+            <li class="nav__list__item">
+              <a href="#" class="nav__list__item-link">Features</a>
+              <ul class="dropdown__list">
+                <li class="dropdown__list__item">
+                  <img
+                    src="./images/icon-todo.svg"
+                    alt="icon-todo"
+                    class="dropdown__list__item-icon"
+                  /><a href="#" class="dropdown__list__item-link">Todo List</a>
+                </li>
+                <li class="dropdown__list__item">
+                  <img
+                    src="./images/icon-calendar.svg"
+                    alt="icon-calendar"
+                    class="dropdown__list__item-icon"
+                  /><a href="#" class="dropdown__list__item-link">Calendar</a>
+                </li>
+                <li class="dropdown__list__item">
+                  <img
+                    src="./images/icon-reminders.svg"
+                    alt="icon-reminder"
+                    class="dropdown__list__item-icon"
+                  /><a href="#" class="dropdown__list__item-link">Reminders</a>
+                </li>
+                <li class="dropdown__list__item">
+                  <img
+                    src="./images/icon-planning.svg"
+                    alt="icon-planning"
+                    class="dropdown__list__item-icon"
+                  /><a href="#" class="dropdown__list__item-link">Planning</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__list__item">
+              <a href="#" class="nav__list__item-link">Company</a>
+              <ul class="dropdown__list">
+                <li class="dropdown__list__item">
+                  <a href="#" class="dropdown__list__item-link">History</a>
+                </li>
+                <li class="dropdown__list__item">
+                  <a href="#" class="dropdown__list__item-link">Our Team</a>
+                </li>
+                <li class="dropdown__list__item">
+                  <a href="#" class="dropdown__list__item-link">Blog</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__list__item">
+              <a href="#" class="nav__list__item-link">Careers</a>
+            </li>
+            <li class="nav__list__item">
+              <a href="#" class="nav__list__item-link">About</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="buttons">
+          <button class="button login-btn">Login</button
+          ><button class="button register-btn">Register</button>
+        </div>
+        <a href="#" class="open-nav-button"
+          ><img
+            src="./images/icon-menu.svg"
+            alt="open-menu"
+            class="open-nav-button-img"
+        /></a>
+      </div>
+    </header>
+    <section class="section">
+      <div class="container">
+        <div class="section__content">
+          <p class="section__content-title">Make remote work</p>
+          <p class="section__content-text">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="button section__content-btn">Learn more</button>
+          <div class="section__content-images">
+            <img
+              src="./images/client-databiz.svg"
+              alt="client-databiz"
+              class="section__content-image"
+              width="105px"
+              height="25px"
+            /><img
+              src="./images/client-audiophile.svg"
+              alt="client-audiophile"
+              class="section__content-image"
+              width="75px"
+              height="35px"
+            /><img
+              src="./images/client-meet.svg"
+              alt="client-meet"
+              class="section__content-image"
+            /><img
+              src="./images/client-maker.svg"
+              alt="client-maker"
+              class="section__content-image"
+            />
+          </div>
+        </div>
+        <div class="section__image">
+          <img src="./images/image-hero-desktop.png" alt="hero-desktop" width="500px"
+          height="635px" />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

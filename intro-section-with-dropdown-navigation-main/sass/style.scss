@@ -13,8 +13,87 @@ body {
     margin: 0;
     font-family: 'Epilogue', sans-serif;
     font-size: 18px;
+    font-weight: 500;
+    background-color: $almost-white;
+    color: $medium-gray;
 }
 
 p {
     margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $medium-gray;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+.button {
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.open-nav-button {
+    display: none;
+}
+
+.close-nav-button {
+    display: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
+
+    .section__content {
+        text-align: left;
+        position: relative;
+
+        &-title {
+            color:$almost-black;
+            font-size: 75px;
+            font-weight: 700;
+            margin-bottom: 65px;
+            margin-top: 100px;
+        }
+
+        &-text {
+            font-size: 20px;
+            margin-bottom: 55px;
+        }
+
+        &-btn {
+            border: none;
+            outline: none;
+            border-radius: 12px;
+            background-color: $almost-black;
+            color: $almost-white;
+            padding: 20px 40px;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        &-btn:hover {
+            background-color: $almost-white;
+            color: $almost-black;
+            border: 1px solid $almost-black;
+        }
+
+        &-images {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            align-items: center;
+        }
+    }
 }
