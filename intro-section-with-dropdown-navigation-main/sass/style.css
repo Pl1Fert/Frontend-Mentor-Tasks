@@ -5,7 +5,9 @@
 }
 
 body {
+  height: 100vh;
   margin: 0;
+  padding: 0;
   font-family: "Epilogue", sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -37,10 +39,17 @@ ul {
 }
 
 .open-nav-button {
+  position: absolute;
+  right: 5%;
+  top: 4%;
   display: none;
 }
 
 .close-nav-button {
+  position: absolute;
+  right: 5%;
+  top: 4%;
+  z-index: 5;
   display: none;
 }
 
@@ -52,8 +61,10 @@ ul {
   gap: 50px;
   font-size: 15px;
 }
-.header__logo {
-  margin-top: 5px;
+.header__inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .header__buttons {
   margin-left: auto;
@@ -164,6 +175,7 @@ ul {
   padding: 20px 40px;
   font-weight: 700;
   font-size: 18px;
+  margin-bottom: 150px;
 }
 .container .section__content-btn:hover {
   background-color: hsl(0deg, 0%, 98%);
@@ -177,4 +189,91 @@ ul {
   justify-content: space-between;
   gap: 40px;
   align-items: center;
+}
+.container .section__image {
+  background-image: url("../images/image-hero-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 635px;
+}
+.container .section__image .hero-image {
+  display: none;
+}
+
+.hidden {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: hsl(0deg, 0%, 41%);
+  opacity: 0.7;
+  display: none;
+}
+
+@media screen and (max-width: 1150px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .container .section__content {
+    text-align: center;
+  }
+  .container .section__content-title {
+    margin-top: 0;
+  }
+  .container .section__content-images {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+  }
+  .container .section__image {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 900px) {
+  .open-nav-button {
+    display: block;
+  }
+  .header__inner {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 240px;
+    height: 100vh;
+    z-index: 4;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .header__buttons {
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+    width: 100%;
+  }
+  .header__buttons .login-btn {
+    width: 90%;
+    margin-left: 12px;
+  }
+  .header__buttons .register-btn {
+    margin-left: 12px;
+    margin-top: 15px;
+    width: 90%;
+  }
+  .nav {
+    margin-top: 50px;
+  }
+  .nav__list {
+    text-align: left;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-left: 15px;
+  }
+  .nav__list__item:first-child:hover {
+    margin-bottom: 180px;
+  }
+  .nav__list__item:hover {
+    margin-bottom: 140px;
+  }
 }/*# sourceMappingURL=style.css.map */
