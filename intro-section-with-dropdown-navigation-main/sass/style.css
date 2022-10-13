@@ -38,18 +38,31 @@ ul {
   border-radius: 12px;
 }
 
-.open-nav-button {
+.nav-button {
   position: absolute;
+  cursor: pointer;
+}
+
+.open-nav-button {
   right: 5%;
   top: 4%;
   display: none;
 }
 
 .close-nav-button {
-  position: absolute;
   right: 5%;
   top: 4%;
   z-index: 5;
+  display: none;
+}
+
+.hidden {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: hsl(0deg, 0%, 41%);
+  opacity: 0.7;
   display: none;
 }
 
@@ -201,16 +214,6 @@ ul {
   display: none;
 }
 
-.hidden {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  background-color: hsl(0deg, 0%, 41%);
-  opacity: 0.7;
-  display: none;
-}
-
 @media screen and (max-width: 1150px) {
   .container {
     flex-direction: column-reverse;
@@ -244,6 +247,8 @@ ul {
     z-index: 4;
     flex-direction: column;
     justify-content: start;
+    display: none;
+    background-color: hsl(0deg, 0%, 98%);
   }
   .header__buttons {
     flex-direction: column;
@@ -270,10 +275,49 @@ ul {
     gap: 15px;
     padding-left: 15px;
   }
+  .nav__list__item:first-child:hover .dropdown__list {
+    left: 0;
+  }
   .nav__list__item:first-child:hover {
     margin-bottom: 180px;
   }
-  .nav__list__item:hover {
+  .nav__list__item:nth-child(2):hover {
     margin-bottom: 140px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .container {
+    width: 100%;
+    gap: 70px;
+  }
+  .container .section__content-title {
+    margin-top: 0;
+    font-size: 50px;
+    margin-bottom: 40px;
+  }
+  .container .section__content-text {
+    font-size: 18px;
+    padding: 0 40px;
+    line-height: 1.5;
+  }
+  .container .section__content-images {
+    gap: 13px;
+  }
+  .container .section__content-image {
+    width: 80px;
+    height: 20px;
+  }
+  .container .section__content-image:nth-child(2) {
+    height: 35px;
+  }
+  .container .section__image {
+    width: 100%;
+    background-image: none;
+    margin: 0;
+    height: 420px;
+  }
+  .container .section__image .hero-image {
+    display: block;
+    max-width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
