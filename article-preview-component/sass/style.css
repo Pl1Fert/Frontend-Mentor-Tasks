@@ -1,0 +1,129 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  background-color: hsl(210deg, 46%, 95%);
+  height: 100vh;
+}
+
+p, h2, h4 {
+  margin: 0;
+  color: hsl(217deg, 19%, 35%);
+}
+
+p {
+  color: hsl(212deg, 23%, 69%);
+}
+
+.article {
+  height: 280px;
+  width: 50%;
+  margin: calc(50vh - 140px) auto 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 0 5px 5px 0 hsl(217deg, 19%, 35%);
+}
+.article__photo {
+  width: 40%;
+}
+.article__photo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
+.article__content {
+  width: 60%;
+  padding: 35px;
+}
+.article__content-title {
+  margin-bottom: 20px;
+}
+.article__content-text {
+  margin-bottom: 15px;
+}
+.article__content__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.article__content__footer .author .author__info {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.article__content__footer .author .author__info img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.article__content__footer .share-block {
+  border-radius: 50%;
+  background-color: hsl(210deg, 46%, 95%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 10px;
+  position: relative;
+}
+.article__content__footer .share-block .share-options {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background-color: hsl(217deg, 19%, 35%);
+  padding: 15px 35px;
+  position: absolute;
+  bottom: calc(100% + 20px);
+  left: -340%;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+  visibility: hidden;
+}
+.article__content__footer .share-block .share-options p {
+  letter-spacing: 5px;
+}
+.article__content__footer .share-block .share-options::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -60%) rotate(45deg);
+  background-color: hsl(217deg, 19%, 35%);
+}
+.article__content__footer .share-block:hover .share-options {
+  visibility: visible;
+}
+
+@media screen and (max-width: 1200px) {
+  .article {
+    flex-direction: column;
+    width: 300px;
+    height: auto;
+    margin-top: calc(50vh - 300px);
+  }
+  .article__photo {
+    width: 100%;
+  }
+  .article__content {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .article__content-title {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}/*# sourceMappingURL=style.css.map */
