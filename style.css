@@ -71,4 +71,9 @@ ul {
         width: 100%;
         text-align: center;
     }
+
+    .list {
+        margin: 0;
+        padding: 0;
+    }
 }
