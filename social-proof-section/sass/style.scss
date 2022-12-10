@@ -20,12 +20,13 @@ h1, p {
     margin: 0;
 }
 
-body {
+html, body {
     margin: 0;
     padding: 0;
     font-size: 15px;
     font-family: 'League Spartan', sans-serif;
     font-weight: 400;
+    width: 100%;
 }
 
 .container {
@@ -130,7 +131,7 @@ body {
 
             &__details-name {
                 color: $White;
-                margin-bottom: 3px;
+                margin-bottom: 5px;
                 font-weight: 500;
             }
 
@@ -147,6 +148,20 @@ body {
     &__item:nth-child(2) {
         margin-top: 20px;
     }
+}
+
+.bg-pattern-top {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: -1;
+}
+
+.bg-pattern-bottom {    
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
 }
 
 @media screen and (max-width:1100px) {
@@ -179,6 +194,7 @@ body {
             &__item {
                 flex-direction: column;
                 margin: 0 auto;
+                padding: 20px 47.5px;
 
                 &-img {
                     margin-bottom: 15px;
