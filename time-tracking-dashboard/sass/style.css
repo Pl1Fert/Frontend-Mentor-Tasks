@@ -1,0 +1,231 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(226deg, 43%, 10%);
+  width: 100%;
+  color: white;
+  font-weight: 300;
+}
+
+h2, h3, h4, p {
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: calc(50vh - 260px) auto 0;
+}
+
+.dashboard__inner {
+  display: flex;
+  gap: 25px;
+  height: 520px;
+}
+
+.dashboard__profile {
+  border-radius: 10px;
+  background-color: hsl(235deg, 46%, 20%);
+  min-width: 250px;
+}
+.dashboard__profile .profile-info {
+  border-radius: 10px;
+  background-color: hsl(246deg, 80%, 60%);
+  padding: 30px;
+}
+.dashboard__profile .profile-info__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid hsl(236deg, 100%, 87%);
+  margin-bottom: 30px;
+}
+.dashboard__profile .profile-info__text .profile-info__subtitle {
+  font-size: 14px;
+  color: hsl(236deg, 100%, 87%);
+  margin-bottom: 5px;
+}
+.dashboard__profile .profile-info__text .profile-info__title {
+  font-weight: 300;
+  font-size: 40px;
+  margin-bottom: 80px;
+}
+.dashboard__profile .selector {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+}
+.dashboard__profile .selector .selector__item {
+  color: hsl(235deg, 45%, 61%);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.dashboard__profile .selector .selector__item:hover {
+  color: white;
+}
+
+.dashboard__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.dashboard__content .dashboard__item {
+  height: 245px;
+  width: 255px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: 95% 0;
+}
+
+.dashboard__item_work {
+  background-color: hsl(15deg, 100%, 70%);
+  background-image: url(../images/icon-work.svg);
+}
+
+.dashboard__item_play {
+  background-color: hsl(195deg, 74%, 62%);
+  background-image: url(../images/icon-play.svg);
+}
+
+.dashboard__item_study {
+  background-color: hsl(348deg, 100%, 68%);
+  background-image: url(../images/icon-study.svg);
+}
+
+.dashboard__item_excercise {
+  background-color: hsl(145deg, 58%, 55%);
+  background-image: url(../images/icon-exercise.svg);
+}
+
+.dashboard__item_social {
+  background-color: hsl(264deg, 64%, 52%);
+  background-image: url(../images/icon-social.svg);
+}
+
+.dashboard__item_self-care {
+  background-color: hsl(43deg, 84%, 65%);
+  background-image: url(../images/icon-self-care.svg);
+}
+
+.tracking-card {
+  background-color: hsl(235deg, 46%, 20%);
+  padding: 25px 25px 30px;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+.tracking-card .tracking-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.tracking-card .tracking-card__header .tracking-card__title {
+  font-weight: 500;
+}
+.tracking-card .tracking-card__header .tracking-card__menu {
+  cursor: pointer;
+}
+.tracking-card .tracking-card__body .tracking-card__time {
+  font-weight: 300;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+.tracking-card .tracking-card__body .tracking-card__prev-period {
+  color: hsl(235deg, 45%, 61%);
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1190px) {
+  .dashboard__inner {
+    height: auto;
+  }
+  .container {
+    margin: 10% auto 5%;
+  }
+  .dashboard__profile {
+    height: 520px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .container {
+    width: 90%;
+  }
+  .dashboard__inner {
+    height: auto;
+    flex-direction: column;
+  }
+  .dashboard__profile {
+    height: 520px;
+    width: 550px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .dashboard__content {
+    margin: 0 auto;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 905px) {
+  .dashboard__content {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .dashboard__content {
+    flex-direction: column;
+  }
+  .dashboard__content .dashboard__item {
+    width: 320px;
+    height: auto;
+  }
+  .tracking-card {
+    padding: 25px;
+    margin-top: 40px;
+  }
+  .tracking-card .tracking-card__header {
+    margin-bottom: 10px;
+  }
+  .tracking-card .tracking-card__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tracking-card .tracking-card__body .tracking-card__time {
+    font-size: 35px;
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+  .tracking-card .tracking-card__body .tracking-card__prev-period {
+    font-size: 14px;
+  }
+  .dashboard__profile {
+    height: auto;
+    width: 320px;
+  }
+  .dashboard__profile .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .dashboard__profile .profile-info__photo {
+    margin-bottom: 0;
+  }
+  .dashboard__profile .profile-info .profile-info__title {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .dashboard__profile .selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
