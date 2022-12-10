@@ -126,45 +126,51 @@ p {
             background-image: url(../images/icon-arrow-down.svg);
             background-repeat: no-repeat;
             content: "";
+            transition: all .2s linear;
         }
 
-        &__show &__header-text{
+        &_show &__header-text{
             color: $very-dark-desaturated-blue;
             font-weight: 700;
         }
 
-        &__show &__header::after {
-            transform: rotate(-180deg);
+        &_show &__header::after {
+            transform: rotate(180deg);
         }
 
-        &__show &__body {
+        &_show &__body {
             display: block;
         }
 
-        &:not(&__show) &__body {
+        &:not(&_show) &__body {
             display: none;
         }
     }
 }
 
-
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 950px) {
     .container {
         flex-direction: column;
         align-items: center;
         padding: 0;
         max-width: 360px;
         height: auto;
+        padding: 40px 30px;
 
         .info-block {
             margin-top: 45%;
             width: 80%;
             margin-bottom: 10%;
+            height: auto;
 
             .title {
                 text-align: center;
             }
         }
+    }
+
+    .accordion__item__header {
+        margin-right: 5px;
     }
 
     .images {
