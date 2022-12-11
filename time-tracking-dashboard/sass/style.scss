@@ -98,7 +98,7 @@ h2, h3, h4, p {
             transition: all .2s linear;
         }
 
-        .selector__item:hover {
+        .selector__item:hover, .selector__item_active {
             color: white;
         }
     }
@@ -108,7 +108,7 @@ h2, h3, h4, p {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
-
+    
     .dashboard__item {
         height: 245px;
         width: 255px;
@@ -133,7 +133,7 @@ h2, h3, h4, p {
     background-image: url(../images/icon-study.svg);
 }
 
-.dashboard__item_excercise {
+.dashboard__item_exercise {
     background-color: $Lime-green;
     background-image: url(../images/icon-exercise.svg);
 }
@@ -152,7 +152,9 @@ h2, h3, h4, p {
     background-color: $Dark-blue;
     padding: 25px 25px 30px;
     border-radius: $Border-radius;
-    margin-top: 50px;
+    margin-top: 53px;
+    cursor: pointer;
+    transition: all .2s linear;
 
     .tracking-card__header {
         display: flex;
@@ -181,6 +183,10 @@ h2, h3, h4, p {
             font-size: 15px;
         }
     }
+}
+
+.tracking-card:hover {
+    background-color: $Blue;
 }
 
 @media screen and (max-width:1190px){
