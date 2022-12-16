@@ -1,0 +1,158 @@
+// Colors
+
+// Primary
+
+$Orange: hsl(25, 97%, 53%);
+
+// Neutral
+
+$White: hsl(0, 0%, 100%);
+$Light-Grey: hsl(217, 12%, 63%);
+$Medium-Grey: hsl(216, 12%, 54%);
+$Dark-Grey: hsl(214, 16%, 19%);
+$Dark-Blue: hsl(210, 18%, 13%);
+$Very-Dark-Blue: hsl(216, 12%, 8%);
+
+*, 
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    background-color: $Very-Dark-Blue;
+    margin: 0;
+    padding: 0;
+}
+
+h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    width: 410px;
+    height: 410px;
+    margin: calc(50vh - 205px) auto 0;
+    background-color: $Dark-Blue;
+    border-radius: 25px;
+}
+
+.title {
+    color: $White;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.text {
+    color: $Medium-Grey;
+}
+
+.background-circle {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $Dark-Grey;
+}
+
+.rating-card {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+
+    &__header {
+        margin-bottom: 25px;
+    }
+
+    &__content {
+        text-align: left;
+        margin-bottom: 25px;
+    }
+
+    .rating-wrapper {
+        display: flex;
+        gap: 20px;
+        justify-content: space-evenly;
+        margin-bottom: 30px;
+    }
+
+    .rating-btn {
+        cursor: pointer;
+        transition: all .2s linear;
+        color:$Medium-Grey;
+    }
+
+    .rating-btn:hover {
+        background-color: $Light-Grey;
+        color: $White;
+    }
+
+    .rating-btn_active {
+        background-color: $Orange;
+        color: $White;
+    }
+
+    .submit-btn {
+        width: 100%;
+        height: 45px;
+        border-radius: 25px;
+        cursor: pointer;
+        background-color: $Orange;
+        color:$White;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all .2s linear;
+        border: none;
+    }
+
+    .submit-btn:hover {
+        background-color: $White;
+        color: $Orange;
+    }
+}
+
+.gratitude-card {
+    width: 100%;
+    height: 100%;
+    padding: 30px 35px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    .score {
+        color: $Orange;
+        width: 185px;
+        margin: 0 auto 35px;
+        background-color: $Dark-Grey;
+        border-radius: 15px;
+        text-align: center;
+        padding: 6px;
+    }
+}
+
+.card_hidden {
+    display: none;
+}
+
+@media screen and (max-width:450px) {
+    .section {
+        width: 80%;
+        margin: 20% auto 0 auto;
+    }
+}
