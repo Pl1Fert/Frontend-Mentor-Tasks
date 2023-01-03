@@ -108,6 +108,7 @@ h2, h3, h4, p {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
+    max-width: 1000px;
     
     .dashboard__item {
         height: 245px;

@@ -65,6 +65,7 @@ ul {
         width: 100%;
         flex-direction: column;
         justify-content: start;
+        margin-bottom: 5%;
     }
 
     .list__container {
